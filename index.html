@@ -15,7 +15,7 @@
       <div class="messages-container">
         <div ng-repeat="message in messages | orderBy: 'createdAt' : true | filter: {message:filter}" class="indiMessage">
         <span ng-class-odd="'message-odd'" ng-class-even="'message-even'"><a style="font-size:15px">msg:</a> {{message.message}}</span>
-        <span class="timestamp">{{message.createdAt}}</span>
+        <span class="timestamp">{{message.createdAt | date:'short'}}</span>
       </div>
     </div>
     <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.19.min.js"></script>
