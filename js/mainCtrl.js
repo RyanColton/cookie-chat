@@ -4,6 +4,7 @@ angular.module('chatroom').controller('mainCtrl', function($scope, messageServic
   //You'll then save the result of that request to your controller's $scope as messages ($scope.messages)
 $scope.getMessages = function(){
   messageService.getMessages().then(function(response){
+    // console.log("timestamp from controller", response.data.object.createdAt);
     $scope.messages = response.data;
   });
 

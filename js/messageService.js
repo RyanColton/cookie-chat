@@ -9,7 +9,13 @@ angular.module('chatroom').service('messageService', function($http){
       method: 'GET',
       url: 'https://practiceapi.devmounta.in/api/chats'
     })
+  }
 
+  this.getCookies = function(){
+    return $http({
+      method: 'GET',
+      url: 'https://practiceapi.devmounta.in/api/cookies'
+    })
   }
   //On the line below create the postMessage method. This method will add data to the backend server.
   //The url for the request needs to be 'https://practiceapi.devmounta.in/api/chats'
@@ -25,6 +31,12 @@ angular.module('chatroom').service('messageService', function($http){
     })
   }
 
+  this.postCookies = function(){
+    return $http({
+      method: 'POST',
+      url: 'https://practiceapi.devmounta.in/api/cookies'
+    })
+  }
 
 
 });
